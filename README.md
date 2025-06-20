@@ -1,5 +1,7 @@
 ## Getting Started
 
+!!IN CASE VERCEL DEPLOYMENT DOES NOT WORK PLEASE DO LOCAL!!
+
 First, go to backend directory and run on (venv):
 
 ```bash
