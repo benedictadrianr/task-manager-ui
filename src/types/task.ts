@@ -9,10 +9,14 @@ export interface Task {
 
 export interface TaskContextType {
   tasks: Task[];
-  addTask: (task: Omit<Task, "id" | "createdAt" | "updatedAt">) => void;
+  addTask: (
+    task: Omit<Task, "id" | "createdAt" | "updatedAt">
+  ) => Promise<boolean>;
   updateTask: (task: Task) => void;
-  deleteTask: (id: string) => void;
-  toggleTask: (id: string) => void;
+  deleteTask: (id: string) => Promise<boolean>;
+  toggleTask: (id: string) => Promise<boolean>;
+  isLoading: boolean;
+  error: string | null;
 }
 
 export type TaskAction =
